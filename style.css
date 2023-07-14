@@ -1,0 +1,33 @@
+body {
+    width: 100vw;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.right {
+    width: 48%;
+    padding: 10px;
+}
+
+
+.left {
+    width: 48%;
+    padding: 10px;
+}
+
+.left div {
+    margin: 15px auto;
+}
+

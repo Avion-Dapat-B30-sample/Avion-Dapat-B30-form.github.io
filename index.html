@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <h1>Ayo place your bets</h1>
+    </section>
+    <section class="main">
+        <div class="right">
+            <h2>Arima Kinen</h2>
+            <p id="description">The Arima Kinen (有馬記念) is a Grade I flat horse race in Japan open to Thoroughbreds which are three-years-old or above and the world's largest betting horserace. It is run over a distance of 2,500 metres (approximately 1 mile and 4+1⁄2 furlongs) at Nakayama Racecourse, and it takes place annually in late December. It is one of the two "All-Star" races in Japanese horse racing; the other is the Takarazuka Kinen in late June. </p>
+        </div>
+        <div class="left">
+            <div class="form-container">
+                <form id="survery-form" action="" method="get">
+                    <div class="basic-info">
+                        <div class="name">
+                            <label id="name-label" for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name">
+                        </div>
+                        <div class="email">
+                            <label id="email-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address">
+                        </div>
+                    </div>
+
+                    <div class="radios">
+                        <div class="choice">
+                            <input type="radio" id="choice1" name="horsebet" value="kitasanblack">
+                            <label for="kitasanblack">Kitasan Black</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" id="choice2" name="horsebet" value="satonodiamond">
+                            <label for="satonodiamond">Satono Diamond</label>    
+                        </div>
+                        <div class="choice">
+                            <input type="radio" id="choice3" name="horsebet" value="chevalgrand">
+                            <label for="chevalgrand">Cheval Grand</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" id="choice4" name="horsebet" value="satonocrown">
+                            <label for="satonocrown">Satono Crown</label>
+                        </div>
+                    </div>
+
+                    <div class="position">
+                        <label for="position">Position</label>
+                        <select id="dropdown" name="position" id="position">
+                            <option value="first">First</option>
+                            <option value="second">Second</option>
+                            <option value="third">Third</option>
+                            <option value="fourth">Fourth</option>
+                            <option value="fifth">Fifth</option>
+                            <option value="sixth">Sixth</option>
+                            <option value="seventh">Seventh</option>
+                            <option value="eighth">Eighth</option>
+                            <option value="ninth">Ninth</option>
+                            <option value="tenth">Tenth</option>
+                            <option value="eleventh">Eleventh</option>
+                            <option value="twelfth">Twelfth</option>
+                            <option value="thirteenth">Thirteenth</option>
+                            <option value="fourteenth">Fourteenth</option>
+                            <option value="fifteenth">Fifteenth</option>
+                            <option value="sixteenth">Sixteenth</option>
+                            <option value="seventeenth">Seventeenth</option>
+                            <option value="eighteenth">Eighteenth</option>
+                            <option value="nineteenth">Nineteenth</option>
+                            <option value="twentieth">Twentieth</option>
+                            <option value="twentyfirst">Twenty-first</option>
+                        </select>
+                    </div>
+
+                    <div class="checkboxes">
+                        <div class="choice">
+                            <label id="number-label" for="betamount">Bet Amount</label>
+                            <input type="checkbox" id="choice1" name="betamount" value="1000">
+                            <label for="1000">1000</label>
+
+                            <input type="checkbox" id="choice2" name="betamount" value="5000">
+
+                            <label for="5000">5000</label>
+
+                            <input type="checkbox" id="choice3" name="betamount" value="10000">
+
+                            <label for="10000">10000</label>
+
+                            <input type="checkbox" id="choice4" name="betamount" value="100000">
+
+                            <label for="100000">100000</label>
+                        </div>
+                    </div>
+
+                    <div class="bets">
+                        <label id="number-label" for="betamount">Custom Bet Amount</label>
+                        <input type="number" id="betamount" name="betamount" placeholder="Bet Amount" min="1000" max="1000000">
+                    </div>
+
+                    <div class="ticket-count">
+                        <p id="amount"></p>
+                    </div>
+
+
+
+
+
+                    <div class="comments">
+                        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var amount = document.getElementById('amount');
+        var count = 0;
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener('change', function() {
+                if (this.checked) {
+                    count++;
+                } else {
+                    count--;
+                }
+                amount.innerHTML = "You have selected " + count + " bets";
+            });
+        }
+
+    </script>
+</body>
+</html>
